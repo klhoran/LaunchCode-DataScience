@@ -4,7 +4,6 @@
     <list default="true" id="938a2949-c188-4976-a583-c67037487a34" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/ex1/computeCost.py" afterPath="$PROJECT_DIR$/ex1/computeCost.py" />
       <change beforePath="$PROJECT_DIR$/ex1/ex1.py" afterPath="$PROJECT_DIR$/ex1/ex1.py" />
-      <change beforePath="$PROJECT_DIR$/ex1/plotData.py" afterPath="$PROJECT_DIR$/ex1/plotData.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,34 +14,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ex1.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ex1.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ex1/ex1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="55" column="13" lean-forward="false" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
+            <state relative-caret-position="752">
+              <caret line="85" column="1" lean-forward="false" selection-start-line="85" selection-start-column="1" selection-end-line="85" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="computeCost.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="computeCost.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ex1/computeCost.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="135">
+              <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="plotData.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ex1/plotData.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="37" lean-forward="true" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -55,13 +42,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ex1/ex1.py" />
         <option value="$PROJECT_DIR$/ex1/plotData.py" />
+        <option value="$PROJECT_DIR$/ex1/computeCost.py" />
+        <option value="$PROJECT_DIR$/ex1/ex1.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="178" />
+    <option name="x" value="201" />
     <option name="y" value="22" />
     <option name="width" value="1400" />
     <option name="height" value="834" />
@@ -177,7 +165,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="178" y="22" width="1400" height="834" extended-state="0" />
+    <frame x="201" y="22" width="1400" height="834" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -252,18 +240,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ex1/computeCost.py">
+    <entry file="file://$PROJECT_DIR$/ex1/ex1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="752">
+          <caret line="85" column="1" lean-forward="false" selection-start-line="85" selection-start-column="1" selection-end-line="85" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ex1/ex1.py">
+    <entry file="file://$PROJECT_DIR$/ex1/computeCost.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="55" column="13" lean-forward="false" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
+        <state relative-caret-position="135">
+          <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
           <folding />
         </state>
       </provider>

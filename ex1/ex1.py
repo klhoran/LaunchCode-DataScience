@@ -46,7 +46,7 @@ input("Program paused. Press Enter to continue...")
 # ======================= Part 2: Plotting =======================
 data = np.loadtxt('ex1data1.txt', delimiter=',')
 m = data.shape[0]
-#X = np.vstack(zip(np.ones(m),data[:, 0]))
+
 X = data[:, 0]
 y = data[:, 1]
 
@@ -60,15 +60,20 @@ input("Program paused. Press Enter to continue...")
 
 # =================== Part 3: Gradient descent ===================
 print('Running Gradient Descent ...')
+
 theta = np.zeros(2)
+X = np.vstack(zip(np.ones(m),data[:, 0]))
+y = data[:, 1]
+iterations = 1500
+alpha = 0.01
 
 # compute and display initial cost
 J = computeCost(X, y, theta)
 print('cost: %0.4f ' % J)
 
 # Some gradient descent settings
-iterations = 1500
-alpha = 0.01
+#iterations = 1500
+#alpha = 0.01
 
 # run gradient descent
 theta, J_history = gradientDescent(X, y, theta, alpha, iterations)
@@ -78,8 +83,8 @@ print('Theta found by gradient descent: ')
 print('%s %s \n' % (theta[0], theta[1]))
 
 # Plot the linear fit
-plt.figure()
-plotData(data)
+#plt.figure()
+plotData(X, y)
 plt.plot(X[:, 1], X.dot(theta), '-', label='Linear regression')
 plt.legend(loc='upper right', shadow=True, fontsize='x-large', numpoints=1)
 plt.show()
