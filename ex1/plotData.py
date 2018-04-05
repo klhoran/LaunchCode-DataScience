@@ -6,7 +6,8 @@ def plotData(X, y):
     plots the data points and gives the figure axes labels of
     population and profit.
     """
-
+    # open a new figure window
+    plt.figure()
 # ====================== YOUR CODE HERE ======================
 # Instructions: Plot the training data into a figure using the
 #               "figure" and "plot" commands. Set the axes labels using
@@ -19,9 +20,9 @@ def plotData(X, y):
 #       markers larger by using plot(..., 'rx', 'MarkerSize', 10);
     plt.xlabel ("Population of City in 10,000s")
     plt.ylabel ("Profit in $10,000s")
-    plt.plot (X, y, 'rx', markersize = 10)
+    plt.plot (X, y, 'rx', markersize=10)
 
 
-    #plt.figure()  # open a new figure window
+
 
 # ============================================================

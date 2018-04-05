@@ -1,7 +1,8 @@
+import numpy as np
 from computeCost import computeCost
 
 
-def gradientDescent(X, y, theta, alpha, num_iters):
+def gradientDescent(X, y, theta, alpha, iterations):
     """
      Performs gradient descent to learn theta
        theta = gradientDescent(x, y, theta, alpha, num_iters) updates theta by
@@ -10,9 +11,15 @@ def gradientDescent(X, y, theta, alpha, num_iters):
 
     # Initialize some useful values
     J_history = []
-    m = y.size  # number of training examples
 
-    for i in range(num_iters):
+    #J_history = np.zeros (iterations)
+    # number of training examples
+    m = len(y)
+
+
+    for i in range(iterations):
+    #for iter in np.arange (num_iters):
+
         #   ====================== YOUR CODE HERE ======================
         # Instructions: Perform a single gradient step on the parameter vector
         #               theta.
@@ -20,6 +27,19 @@ def gradientDescent(X, y, theta, alpha, num_iters):
         # Hint: While debugging, it can be useful to print out the values
         #       of the cost function (computeCost) and gradient here.
         #
+        #h = X.dot(theta)
+        #theta = theta - alpha * (1 / m) * (X.T.dot(h-y))
+
+        h = X.dot(theta)
+        errors = h - y
+        delta = X.T.dot(errors)
+        theta -= (alpha / m) * delta
+
+        #h = X.dot(theta)
+        #theta = theta - alpha * (1 / m) * (X.dot (h - y))
+        #J_history[iterations] = computeCost (X, y, theta)
+        #return (theta, J_history)
+
 
 
         # ============================================================
@@ -27,4 +47,5 @@ def gradientDescent(X, y, theta, alpha, num_iters):
         # Save the cost J in every iteration
         J_history.append(computeCost(X, y, theta))
 
-    return theta, J_history
+
+        return theta, J_history
