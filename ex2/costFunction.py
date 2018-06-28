@@ -1,4 +1,4 @@
-from numpy import log
+import numpy as np
 from sigmoid import sigmoid
 
 def costFunction(theta, X,y):
@@ -7,8 +7,13 @@ def costFunction(theta, X,y):
     gradient of the cost w.r.t. to the parameters."""
 
 # Initialize some useful values
-    m = y.size # number of training examples
+    # number of training examples
+    m = y.size
+    
+    J = 0
+    h=sigmoid(np.dot(X, theta))
 
+    J= -(1/m)*(np.sum(y*np.log(h)+((1-y)*np.log(1-h))))
 
 # ====================== YOUR CODE HERE ======================
 # Instructions: Compute the cost of a particular choice of theta.
@@ -18,6 +23,6 @@ def costFunction(theta, X,y):
 #
 # Note: grad should have the same dimensions as theta
 #
-    J = 0
+
     
     return J

@@ -15,10 +15,10 @@ from gradientFunctionReg import gradientFunctionReg
 from sigmoid import sigmoid
 
 
-def optimize(Lambda):
+def optimize(mylambda):
 
-    result = minimize(costFunctionReg, initial_theta, method='L-BFGS-B',
-               jac=gradientFunctionReg, args=(X.as_matrix(), y, Lambda),
+    result = minimize(costFunctionReg, theta, method='L-BFGS-B',
+               jac=gradientFunctionReg, args=(X.as_matrix(), y, mylambda),
                options={'gtol': 1e-4, 'disp': False, 'maxiter': 1000})
 
     return result
@@ -27,12 +27,12 @@ def optimize(Lambda):
 # Plot Boundary
 def plotBoundary(theta, X, y):
     plotDecisionBoundary(theta, X.values, y.values)
-    plt.title(r'$\lambda$ = ' + str(Lambda))
+    plt.title(r'$\mylambda$ = ') + (mylambda)
 
     # Labels and Legend
     plt.xlabel('Microchip Test 1')
     plt.ylabel('Microchip Test 2')
-    show()
+    plt.show()
 
 
 
@@ -51,7 +51,7 @@ plotData(X.values, y.values)
 # Labels and Legend
 plt.xlabel('Microchip Test 1')
 plt.ylabel('Microchip Test 2')
-show()
+plt.show()
 input("Program paused. Press Enter to continue...")
 
 
@@ -64,14 +64,14 @@ input("Program paused. Press Enter to continue...")
 X = X.apply(mapFeature, axis=1)
 
 # Initialize fitting parameters
-initial_theta = np.zeros(X.shape[1])
+theta = np.zeros(X.shape[1])
 
 # Set regularization parameter lambda to 1
-Lambda = 0.0
+mylambda = 0.0
 
 # Compute and display initial cost and gradient for regularized logistic
 # regression
-cost = costFunctionReg(initial_theta, X, y, Lambda)
+cost = costFunctionReg(theta, X, y, mylambda)
 
 print('Cost at initial theta (zeros): %f' % cost)
 
@@ -79,19 +79,19 @@ print('Cost at initial theta (zeros): %f' % cost)
 
 # Optimize and plot boundary
 
-Lambda = 1.0
-result = optimize(Lambda)
+mylambda = 1.0
+result = optimize(mylambda)
 theta = result.x
 cost = result.fun
 
 # Print to screen
-print('lambda = ' + str(Lambda))
+print('lambda = ' + str(mylambda))
 print('Cost at theta found by scipy: %f' % cost)
 print('theta:', ["%0.4f" % i for i in theta])
 
 input("Program paused. Press Enter to continue...")
 
-plotBoundary(theta, X, y)
+plotBoundary(X, y, theta)
 
 # Compute accuracy on our training set
 p = np.round(sigmoid(X.dot(theta)))
@@ -103,10 +103,10 @@ input("Program paused. Press Enter to continue...")
 # ============= Part 3: Optional Exercises =============
 
 
-for Lambda in np.arange(0.0,10.1,1.0):
-    result = optimize(Lambda)
+for l in np.arange(0.0,10.1,1.0):
+    result = optimize(mylambda)
     theta = result.x
-    print('lambda = ' + str(Lambda))
+    print('lambda = ' + str(mylambda))
     print('theta:', ["%0.4f" % i for i in theta])
     plotBoundary(theta, X, y)
 input("Program paused. Press Enter to continue...")

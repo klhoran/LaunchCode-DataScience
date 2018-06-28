@@ -1,7 +1,8 @@
-from costFunction import costFunction
+#from costFunction import costFunction
+import numpy as np
+from sigmoid import sigmoid
 
-
-def costFunctionReg(theta, X, y, Lambda):
+def costFunctionReg(theta, X, y, mylambda):
     """
     Compute cost and gradient for logistic regression with regularization
 
@@ -9,8 +10,8 @@ def costFunctionReg(theta, X, y, Lambda):
     gradient of the cost w.r.t. to the parameters.
     """
     # Initialize some useful values
-    m = len(y)   # number of training examples
-
+    m = y.size   # number of training examples
+    J = 0
 # ====================== YOUR CODE HERE ======================
 # Instructions: Compute the cost of a particular choice of theta.
 #               You should set J to the cost.
@@ -18,5 +19,14 @@ def costFunctionReg(theta, X, y, Lambda):
 #               derivatives of the cost w.r.t. each parameter in theta
 
 # =============================================================
-    J = 0
+    #J=(costFunction(theta, X, y)) +((mylambda/(2*m) *(np.sum(theta[1:]**2))))
+
+    h = sigmoid(np.dot (X, theta))
+
+    #J = -(1 / m) * (np.sum (y * np.log (h) + ((1 - y) * np.log (1 - h))))
+
+    J = -(1.0 / m) * (np.sum (y.values.flatten() * np.log(h) + ((1 - y.values.flatten()) * np.log(1 - h))))+((mylambda/(2*m) *(np.sum(theta[1:]**2))))
+
+
+    #return (J.flatten())
     return J

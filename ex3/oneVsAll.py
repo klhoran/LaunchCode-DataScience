@@ -5,7 +5,7 @@ from lrCostFunction import lrCostFunction
 from ex2.gradientFunctionReg import gradientFunctionReg
 
 
-def oneVsAll(X, y, num_labels, Lambda):
+def oneVsAll(X, y, num_labels, mylambda):
     """trains multiple logistic regression classifiers and returns all
         the classifiers in a matrix all_theta, where the i-th row of all_theta
         corresponds to the classifier for label i
